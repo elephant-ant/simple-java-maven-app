@@ -15,6 +15,46 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+
+
+  <repositories>
+    <repository>
+      <id>aliyun</id>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <name>aliyun maven repository</name>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <!--pom.xml 文件检查间隔,interval: 间隔分钟,一周-->
+        <updatePolicy>interval:10080</updatePolicy>
+        <!--部署时检查校验和-->
+        <checksumPolicy>ignore</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <!--插件仓库配置-->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>aliyun</id>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <name>aliyun maven plugin repository</name>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>interval:10080</updatePolicy>
+        <checksumPolicy>ignore</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+
   <build>
     <plugins>
       <plugin>
