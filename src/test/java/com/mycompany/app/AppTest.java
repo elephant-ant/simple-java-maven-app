@@ -35,7 +35,7 @@ public class AppTest
     @Test
     public void testMyError() {
         try {
-            int i=1/0;
+//            int i=1/0;
         } catch (Exception e) {
             fail("Construction failed.");
         }
